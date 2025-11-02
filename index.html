@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Визитная карточка</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <span class="logo-dot" aria-hidden="true"></span>
+        <div class="logo">
+  <img src="/Users/nikitaachkasov/Desktop/сайт/Рulse.png" alt="Pulse Logo" class="logo-img">
+
+</div>
+      </div>
+      <nav>
+        <a href="#projekte" class="btn">Наши проекты</a>
+        <a href="#team" class="btn" style="margin-left:8px">команда</a>
+        <a href="#Контакты" class="btn" style="margin-left:8px">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Видосик без звука-->
+  <section class="hero" id="start">
+    <video src="/Users/nikitaachkasov/Desktop/сайт/IMG_1494.MP4" autoplay muted loop playsinline></video>
+    <div class="hero-inner">
+      <div class="hero-card">
+        <span class="kicker">заглавие </span>
+        <h1>Место для <span style="color:var(--brand)">трех</span> блоков</h1>
+        <div class="bullet">
+          <span class="dot" aria-hidden="true"></span>
+          <div>
+            <strong>Блок 1:</strong>
+            <div>тут будет стоять <b>слоган команды / примерно</b> в две строчки</div>
+          </div>
+        </div>
+        <div class="bullet">
+          <span class="dot" aria-hidden="true"></span>
+          <div>
+            <strong>Блок 2:</strong>
+            <div>краткая инфа: <b>Названия проектов </b> и какое отношения имеют к Варшаве </div>
+          </div>
+        </div>
+        <div class="bullet">
+          <span class="dot" aria-hidden="true"></span>
+          <div>
+            <strong>Блок 3:</strong>
+            <div>тут можно написать что то еще  <b></b>.</div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- Проекты -->
+  <section id="projekte">
+    <div class="container">
+      <h2 class="title">Проект</h2>
+      <p class="sub">Контент будет позже</p>
+      <div class="grid cols-2">
+        <div class="card">Пульс 1 </div>
+        <div class="card"> Пульс 2</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO SEKTION -->
+  <section id="video">
+    <div class="container">
+      <h2 class="title">Видео</h2>
+      <p class="sub">тут можно вставить видео еще если нужно</p>
+      <div class="card" style="min-height:220px;width:100%">
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team">
+    <div class="container">
+      <h2 class="title">Team</h2>
+      <p class="sub">12 Personen: Foto, Name, Position.</p>
+      <div class="team">
+        <!-- 12 участников -->
+        <!-- фотки заменить можно в цсс файле -->
+        <!-- 1..12 -->
+        <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя </div><div class="role">Верховный жрец</div></div></div>
+        <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">властелин пламени</div></div></div>
+        <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">менеджер</div></div></div>
+        <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
+        <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
+        <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
+        <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
+        <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
+        <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
+        <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
+        <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
+        <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3D MODELL -->
+  <section id="model3d">
+    <div class="container">
+      <h2 class="title">3D-Modell</h2>
+      <p class="sub">  по идеи должно крутиться и приближаться <code>assets/model.glb</code> </p>
+      <div id="viewerWrap">
+        <canvas id="threeCanvas" aria-label="3D-Viewer"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- секция вопросов -->
+  <section id="faq">
+    <div class="container">
+      <h2 class="title">Q&A</h2>
+      <div class="faq">
+        <div class="faq-item">
+          <button class="faq-q">Альянс или Орда?<span>+</span></button>
+          <div class="faq-a"><div class="inner">ответ.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Модный вопрос  <span>+</span></button>
+          <div class="faq-a"><div class="inner">ответ.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Модный вопрос  <span>+</span></button>
+          <div class="faq-a"><div class="inner">ответ.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Модный вопрос <span>+</span></button>
+          <div class="faq-a"><div class="inner">ответ.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER / KONTAKT -->
+  <footer id="Контакты">
+    <div class="footer-inner">
+      <div class="logo" style="color:#e5e7eb"><span class="logo-dot"></span><span>TEAMNAME</span></div>
+      <div class="contact">
+        <span class="pill"><strong>Kontakt:</strong> <span style="opacity:.9">email@gmail.com</span></span>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Drei.js von CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.161.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.161.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
