@@ -59,38 +59,84 @@
     </div>
   </section>
 
-  <!-- Проекты -->
-  <section id="projekte">
-    <div class="container">
-      <h2 class="title">Проект</h2>
-      <p class="sub">Контент будет позже</p>
-      <div class="grid cols-2">
-        <div class="card">Пульс 1 </div>
-        <div class="card"> Пульс 2</div>
+ <section id="projekte">
+  <div class="container">
+    <h2 class="title">Наши проекты</h2>
+
+    <div class="projects-grid">
+      <!-- Пульс 1 -->
+      <div class="faq-item card">
+        <button class="faq-question">
+          <div class="faq-title">
+            <img src="" alt="Пульс 1" class="project-thumb">
+            <span>Заглавие для проекта</span>
+          </div>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>ЗПроцессор в вычислительной технике — электронный компонент (цифровая схема), который выполняет операции с внешним источником данных, обычно с памятью или каким-либо другим потоком данных. Этот термин часто используется для обозначения центрального процессора (ЦП), главного процессора в системе. Однако оно также может относиться к другим сопроцессорам, таким как графический процессор (GPU).
+
+Сейчас он обычно имеет форм-фактор микропроцессора, который реализован на одной (или нескольких тесно интегрированных) микросхеме (интегральной схеме). В прошлом же процессоры создавались с использованием множества отдельных электронных ламп, множества дискретных транзисторов или же множества интегральных схем малой интеграции.
+</p>
+        </div>
+      </div>
+
+      <!-- Пульс 2 -->
+      <div class="faq-item card">
+        <button class="faq-question">
+          <div class="faq-title">
+            <img src="" alt="Пульс 2" class="project-thumb">
+            <span>Заглавие для проекта</span>
+          </div>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>ла ла</p>
+        </div>
+      </div>
+
+      <!-- Ну типо пульс 3 -->
+      <div class="faq-item card">
+        <button class="faq-question">
+          <div class="faq-title">
+            <img src="" alt="Пульс 3" class="project-thumb">
+            <span>Заглавие для проекта</span>
+          </div>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>воадыоаы</p>
+        </div>
+      </div>
+
+      <!-- ну типо пульс 4 -->
+      <div class="faq-item card">
+        <button class="faq-question">
+          <div class="faq-title">
+            <img src="" alt="Пульс 4" class="project-thumb">
+            <span>Заглавие для проектаь</span>
+          </div>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>ла ла двы</p>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- VIDEO SEKTION -->
-  <section id="video">
-    <div class="container">
-      <h2 class="title">Видео</h2>
-      <p class="sub">тут можно вставить видео еще если нужно</p>
-      <div class="card" style="min-height:220px;width:100%">
-      </div>
-    </div>
-  </section>
 
-  <!-- TEAM -->
+
+  <!-- команда -->
   <section id="team">
     <div class="container">
       <h2 class="title">Team</h2>
-      <p class="sub">12 Personen: Foto, Name, Position.</p>
+
       <div class="team">
-        <!-- 12 участников -->
-        <!-- фотки заменить можно в цсс файле -->
-        <!-- 1..12 -->
-        <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя </div><div class="role">Верховный жрец</div></div></div>
+
+
+        <div class="member"><img src="/Users/nikitaachkasov/Desktop/сайт/photo_2025-11-05_13-52-45.jpg" alt="Имя участника" class="ph"><div class="meta"><div class="name">Имя </div><div class="role">Верховный жрец</div></div></div>
         <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">властелин пламени</div></div></div>
         <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">менеджер</div></div></div>
         <div class="member"><div class="ph">Foto</div><div class="meta"><div class="name">Имя</div><div class="role">позиция</div></div></div>
@@ -106,11 +152,11 @@
     </div>
   </section>
 
-  <!-- 3D MODELL -->
+  <!-- 3д модель -->
   <section id="model3d">
     <div class="container">
       <h2 class="title">3D-Modell</h2>
-      <p class="sub">  по идеи должно крутиться и приближаться <code>assets/model.glb</code> </p>
+      <p class="sub">  по идеи должно крутиться и приближаться </p>
       <div id="viewerWrap">
         <canvas id="threeCanvas" aria-label="3D-Viewer"></canvas>
       </div>
@@ -142,7 +188,7 @@
     </div>
   </section>
 
-  <!-- FOOTER / KONTAKT -->
+  <!-- футер -->
   <footer id="Контакты">
     <div class="footer-inner">
       <div class="logo" style="color:#e5e7eb"><span class="logo-dot"></span><span>Pulse</span></div>
@@ -154,10 +200,10 @@
     </div>
   </footer>
 
-  <!-- Drei.js von CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.161.0/examples/js/controls/OrbitControls.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.161.0/examples/js/loaders/GLTFLoader.js"></script>
-  <script src="script.js"></script>
+  <!-- подключение жс к 3д -->
+ <script src="https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.161.0/examples/js/controls/OrbitControls.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.161.0/examples/js/loaders/GLTFLoader.js" defer></script>
+<script src="script.js" defer></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 :root{
-  --brand:#45C5FF;
+  --brand:#8936e7;
   --bg:#0b1220;
   --text:#0f172a;
   --light:#f8fafc;
@@ -17,7 +17,7 @@ img{max-width:100%;display:block}
 /* Хедер */
 header{position:sticky; top:0; z-index:1000; backdrop-filter:saturate(120%) blur(8px); background:linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.65)); border-bottom:1px solid rgba(2,6,23,.06)}
 .logo-img {
-  height: 36px;       /* подогнать под размер шрифта */
+  height: 36px;
   width: auto;
   object-fit: contain;
 }
@@ -26,6 +26,7 @@ header{position:sticky; top:0; z-index:1000; backdrop-filter:saturate(120%) blur
 .logo{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px; color:#1e293b; font-size:22px}
 .logo-dot{width:14px;height:14px;border-radius:50%;background:var(--brand);display:inline-block}
 .nav a.btn{padding:10px 16px; border:1px solid rgba(2,6,23,.08); border-radius:12px; background:#fff; font-weight:600}
+.nav nav{ margin-left: auto; display: flex; gap: 10px;}
 
 /* Хиро - видос */
 .hero{position:relative; min-height:78vh; display:grid; place-items:center; overflow:hidden; background:#000}
@@ -41,13 +42,218 @@ header{position:sticky; top:0; z-index:1000; backdrop-filter:saturate(120%) blur
 .bullet strong{display:block}
 .ghost{background:rgba(255,255,255,.55); border-radius:var(--radius); border:1px dashed rgba(2,6,23,.12); min-height:220px; display:flex; align-items:center; justify-content:center; color:#1f2937; font-weight:600}
 
+/*фикс булет*/
+.bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.bullet .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #5b21b6;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.bullet strong {
+  display: block;
+}
+
 /* Секции */
 section{padding:68px 0}
-.container{max-width:1200px; margin:0 auto; padding:0 16px}
+.container{max-width:800px; margin:0 auto; padding:0 16px}
 .title{font-size:32px; margin:0 0 22px 0; letter-spacing:.2px}
 .sub{color:var(--muted); margin-top:-6px; margin-bottom:28px}
 
-/* карточки */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  text-align: center;
+  overflow: hidden;
+}
+
+.project-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.projects-grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+/* Карточки проекта */
+.faq-item {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  background: #fff;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 17px;
+  text-align: left;
+  transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+  background: rgba(2,6,23,0.03);
+}
+
+.faq-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.project-thumb {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.faq-icon {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  max-height: none;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.3s ease;
+  padding: 0 20px;
+}
+
+.faq-answer p {
+  margin: 0;
+  padding: 10px 0 16px;
+  color: #374151;
+  line-height: 1.5;
+}
+
+/* Раскрытый аккордеон */
+.faq-item.open .faq-answer {
+  max-height: 200px;
+  padding: 20px 20px 16px;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+}
+
+/* адапатация под мобилки для модулей проектов */
+@media (max-width: 768px) {
+  /* уменшеный общий отступ*/
+  .projects-grid {
+    gap: 12px;
+  }
+
+
+  .faq-question {
+    padding: 12px 14px;
+    font-size: 15px;
+  }
+
+  /* картинка поменьше */
+  .project-thumb {
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+  }
+
+  /* перенос заголовка */
+  .faq-title {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* текст сделать более читаемый */
+  .faq-answer p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+
+  .faq-item {
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+
+  .container {
+    padding: 0 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* на случай маленьких экранов*/
+  .faq-question {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .faq-icon {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+  }
+
+  .faq-title span {
+    font-size: 14px;
+  }
+
+  .faq-answer {
+    padding: 8px 12px 12px;
+  }
+}
+/* капец я тут просто кода дохуя лишнего написал */
+/* деалем фотки для модулей больше */
+@media (min-width: 1024px) {
+  .project-thumb {
+    width: 120px;
+    height: 120px;
+    border-radius: 14px;
+  }
+
+  .faq-question {
+    padding: 20px 24px;
+    font-size: 18px;
+  }
+
+  .faq-answer p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .faq-item {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    border-radius: 18px;
+  }
+}
+
+/*карточки */
 .grid{display:grid; gap:18px}
 .grid.cols-2{grid-template-columns:repeat(2, minmax(0,1fr))}
 .grid.cols-3{grid-template-columns:repeat(3, minmax(0,1fr))}
@@ -59,15 +265,38 @@ section{padding:68px 0}
 .team{display:grid; grid-template-columns:repeat(6, minmax(0,1fr)); gap:16px}
 @media (max-width:1100px){ .team{grid-template-columns:repeat(4,1fr)} }
 @media (max-width:700px){ .team{grid-template-columns:repeat(2,1fr)} }
-.member{background:#fff; border:1px solid rgba(2,6,23,.08); border-radius:18px; overflow:hidden; box-shadow:var(--shadow)}
-.member .ph{aspect-ratio:1/1; background:linear-gradient(135deg, #e2f5ff, #ffffff); display:grid; place-items:center; color:#1f2937; font-weight:700}
-.member .meta{padding:12px 12px 14px}
+.member{background:#fff; border:5  px solid rgba(2,6,23,.08); border-radius:18px; overflow:hidden; box-shadow:var(--shadow)}
+.member .ph{aspect-ratio:1/1; background:linear-gradient(135deg, #e2f5ff, #ffffff); display:grid; place-items:center; color:#1f2937; font-weight:500;}
+.member.ph {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+.member .meta{padding:6px 6px 8px}
+@media (max-width: 700px) { .member{padding: 0}}
 .name{font-weight:800}
-.role{color:var(--muted); font-size:14px}
+.role{color:var(--muted); font-size:10px}
 
-/* 3д изображение */
-#viewerWrap{background:#0b1220; border-radius:18px; overflow:hidden; border:1px solid rgba(255,255,255,.06)}
-#threeCanvas{width:100%; height:520px; display:block}
+/* 3д из*/
+#viewerWrap {
+  background: #0b1220;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.06);
+
+  height: 60vh;
+  min-height: 360px;
+}
+
+
+#threeCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 
 /* вопросы */
 .faq{display:grid; gap:12px}
@@ -77,17 +306,17 @@ section{padding:68px 0}
 .faq-a .inner{padding:0 18px 18px; color:#334155}
 .faq-item.open .faq-a{max-height:240px}
 
-/* футер  */
+/*футер  */
 footer{padding:28px 0 56px; background:#0b1220; color:#cbd5e1; margin-top:36px}
 .footer-inner{max-width:1200px;margin:0 auto;padding:0 16px;display:flex;justify-content:space-between;align-items:center;gap:12px}
 .contact{display:grid; gap:8px}
 .pill{background:#111827; padding:10px 14px; border-radius:999px; display:inline-flex; gap:10px; align-items:center; border:1px solid rgba(255,255,255,.08)}
 .tag{display:inline-block;padding:6px 10px;border-radius:999px;background:#111827;color:#e5e7eb;border:1px solid rgba(255,255,255,.1);font-size:13px}
 
-/* ======= MOBILE FIX ======= */
+/*Фикс для мобилок */
 @media (max-width: 640px) {
 
-  /* чтобы меню не залазило на логотип */
+  /*тобы меню не залазило на логотип */
   header .nav {
     display: flex;
     flex-wrap: wrap;
@@ -110,17 +339,17 @@ footer{padding:28px 0 56px; background:#0b1220; color:#cbd5e1; margin-top:36px}
     white-space: nowrap;
   }
 
-  /* заголовки в hero адаптируются под ширину */
+  /*заголовки в хиро адаптируются под ширину */
   .hero-card h1 {
     font-size: clamp(22px, 6vw, 44px);
   }
 
-  /* чтобы hero-блок не был огромным */
+  /*чтобы хиро блок не был огромным */
   .hero {
     min-height: 60vh;
   }
 
-  /* выравнивание логотипа */
+  /* выравнивание логотипа*/
   .logo {
     display: flex;
     align-items: center;
@@ -132,3 +361,4 @@ footer{padding:28px 0 56px; background:#0b1220; color:#cbd5e1; margin-top:36px}
     width: auto;
   }
 }
+
