@@ -1,11 +1,11 @@
-// функционал для раздела "Вопросы"
+// шторка для вопросов 
 document.querySelectorAll('.faq-q').forEach(btn=>{
   btn.addEventListener('click', ()=>{
     btn.closest('.faq-item').classList.toggle('open');
   });
 });
 
-// Эффект раскрытия как в разделе "Вопросы"
+// шторка для блоков проекты 
 document.querySelectorAll('.faq-question').forEach(btn => {
   btn.addEventListener('click', () => {
     const item = btn.closest('.faq-item');
